@@ -3,36 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Experience — Anudeep Cherukupalli</title>
+  <title>Experience - Anudeep Cherukupalli</title>
   <meta name="theme-color" content="#0ea5e9" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config={darkMode:'class'};</script>
   <style>
-    header{transition:transform .35s ease, opacity .25s ease}
+    header{transition:transform .35s ease,opacity .25s ease}
     .header-hidden{transform:translate(-50%,-160%);opacity:0;pointer-events:none}
     .nav-link{position:relative}
-    .nav-link.active::after{content:'';position:absolute;left:0;right:0;bottom:-8px;height:2px;background:linear-gradient(90deg,#06b6d4,#3b82f6);border-radius:9999px}
+    .nav-link.active::after{content:'';position:absolute;left:0;right:0;bottom:-8px;height:2px;background:linear-gradient(90deg,#10b981,#38bdf8);border-radius:9999px}
     .space-gradient{background:linear-gradient(180deg,#0b1324 0%,#020617 100%)}
-
-    /* Quick reveal-on-scroll */
     .reveal{opacity:0;transform:translateY(10px) scale(.98);transition:opacity .3s ease,transform .3s ease}
     .reveal.show{opacity:1;transform:none}
-
-    /* Little timeline dot */
     .dot{width:10px;height:10px;border-radius:9999px;background:linear-gradient(90deg,#34d399,#60a5fa);box-shadow:0 0 0 3px rgba(34,197,94,.15)}
   </style>
 </head>
 <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
   <header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-5xl px-4 will-change-transform">
-    <div class="backdrop-blur bg-slate-900/60 border border-slate-800 rounded-2xl">
+    <div class="backdrop-blur bg-slate-900/70 border border-slate-800 rounded-2xl">
       <div class="h-14 flex items-center justify-between px-4">
-        <a href="index.html" class="font-bold tracking-tight text-slate-100">
-          <span class="px-2 py-1 rounded-lg bg-gradient-to-r from-emerald-400/20 to-cyan-400/20 border border-emerald-500/30 text-emerald-200">Anudeep Cherukupalli</span>
-        </a>
+        <a href="index.html" class="font-bold tracking-tight text-slate-100"><span class="px-2 py-1 rounded-lg bg-gradient-to-r from-emerald-400/20 to-cyan-400/20 border border-emerald-500/30 text-emerald-200">Anudeep Cherukupalli</span></a>
         <nav class="hidden md:flex items-center gap-6 text-[15px] text-slate-200 font-medium">
           <a class="hover:text-emerald-300 nav-link" href="index.html">Home</a>
           <a class="hover:text-emerald-300 nav-link" href="about.html">About</a>
-          <a class="hover:text-emerald-300 nav-link" href="experience.html">Experience</a>
+          <a class="hover:text-emerald-300 nav-link active" href="experience.html">Experience</a>
           <a class="hover:text-emerald-300 nav-link" href="projects.html">Projects</a>
           <a class="hover:text-emerald-300 nav-link" href="contact.html">Contact</a>
         </nav>
@@ -43,107 +37,96 @@
   <main class="space-gradient min-h-screen pt-28">
     <section class="max-w-6xl mx-auto px-6 pb-24">
       <h1 class="text-center text-4xl md:text-5xl font-extrabold text-slate-100">Work <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 to-sky-400">Experience</span></h1>
-      <p class="mt-3 text-center text-slate-400 max-w-3xl mx-auto">
-        Building dependable systems and user-focused products with test-driven development and clean, scalable code.
-      </p>
+      <p class="mt-3 text-center text-slate-400 max-w-3xl mx-auto">Current resume experience across AI software engineering, backend systems, cloud services, and academic mentorship.</p>
 
-      <!-- Timeline wrapper -->
       <div class="relative mt-12">
-        <!-- center line -->
         <div class="hidden md:block absolute left-1/2 top-0 bottom-0 -translate-x-1/2 border-l border-slate-800"></div>
-
         <div class="space-y-12">
-          <!-- Item 1 (left on md) -->
           <div class="md:grid md:grid-cols-2 md:gap-10 items-start">
             <div class="relative md:pr-10 md:justify-self-end w-full reveal">
-              <div class="hidden md:block absolute right-[-6px] top-3">
-                <div class="dot"></div>
-              </div>
-              <article class="group rounded-2xl border border-slate-800 bg-slate-900/60 p-6 transition duration-200 hover:-translate-y-1 hover:bg-slate-900 hover:shadow-xl hover:shadow-emerald-500/10">
-                <div class="flex items-center justify-between gap-3">
-                  <h3 class="text-lg md:text-xl font-semibold text-slate-100">Summer Intern</h3>
-                  <span class="text-xs px-2 py-1 rounded-full border border-emerald-500/30 text-emerald-300 bg-emerald-500/10">Internship</span>
-                </div>
-                <div class="mt-1 text-emerald-300">Spring Boot · MySQL · JWT · JUnit</div>
-                <div class="mt-2 flex flex-wrap gap-3 text-sm text-slate-400">
-                  <span class="inline-flex items-center gap-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3M3 9h18M5 12h14m-14 4h10m-12 2a2 2 0 01-2-2V7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5z"/></svg>
-                    Summer • 8–12 weeks
-                  </span>
-                  <span class="inline-flex items-center gap-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 11a3 3 0 100-6 3 3 0 000 6zm0 0c-4.418 0-8 2.239-8 5v2h16v-2c0-2.761-3.582-5-8-5z"/></svg>
-                    Hybrid / On-site
-                  </span>
-                </div>
+              <div class="hidden md:block absolute right-[-6px] top-3"><div class="dot"></div></div>
+              <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 transition duration-200 hover:-translate-y-1 hover:bg-slate-900">
+                <div class="flex items-center justify-between gap-3"><h3 class="text-lg md:text-xl font-semibold text-slate-100">AI Software Engineering Intern</h3><span class="text-xs px-2 py-1 rounded-full border border-emerald-500/30 text-emerald-300 bg-emerald-500/10">Current</span></div>
+                <div class="mt-1 text-emerald-300">Qbotica</div>
+                <div class="mt-2 text-sm text-slate-400">Aug 2026 - Present</div>
                 <ul class="mt-4 space-y-2 text-slate-300 text-sm leading-relaxed">
-                  <li>Implemented REST APIs with Spring Boot and optimized MySQL schemas, reducing average response time by <strong>~30%</strong>.</li>
-                  <li>Added JWT-based authentication and secure access patterns; increased reliability with <strong>60%</strong> test coverage (JUnit + integration tests).</li>
-                  <li>Collaborated with design and QA to ship features on time; improved data retrieval efficiency by <strong>~25%</strong>.</li>
+                  <li>Architected agentic AI workflows using LLMs, LangChain, and LangGraph to automate multi-step enterprise operations across logistics systems, email, APIs, and internal applications.</li>
+                  <li>Engineered an AI-powered logistics automation platform integrating enterprise TMS/ERP systems through API-first architecture with UiPath RPA and computer-use agents as fallback layers.</li>
+                  <li>Developed a universal extraction and normalization pipeline for emails, documents, shipment requests, and TMS records.</li>
+                  <li>Built multi-agent orchestration for triage, route and capacity analysis, pricing, load optimization, validation, and automated communication.</li>
                 </ul>
-                <div class="mt-4 flex flex-wrap gap-2 text-xs">
-                  <span class="px-2 py-1 rounded-full border border-slate-700 text-slate-200">Java</span>
-                  <span class="px-2 py-1 rounded-full border border-slate-700 text-slate-200">Spring Boot</span>
-                  <span class="px-2 py-1 rounded-full border border-slate-700 text-slate-200">MySQL</span>
-                  <span class="px-2 py-1 rounded-full border border-slate-700 text-slate-200">JUnit</span>
-                </div>
+                <div class="mt-4 flex flex-wrap gap-2 text-xs"><span class="px-2 py-1 rounded-full border border-slate-700 text-slate-200">LLMs</span><span class="px-2 py-1 rounded-full border border-slate-700 text-slate-200">LangGraph</span><span class="px-2 py-1 rounded-full border border-slate-700 text-slate-200">LangChain</span><span class="px-2 py-1 rounded-full border border-slate-700 text-slate-200">RPA</span></div>
               </article>
             </div>
             <div class="hidden md:block"></div>
           </div>
 
-          <!-- Item 2 (right on md) -->
           <div class="md:grid md:grid-cols-2 md:gap-10 items-start">
             <div class="hidden md:block"></div>
             <div class="relative md:pl-10 w-full reveal">
-              <div class="hidden md:block absolute left-[-6px] top-3">
-                <div class="dot"></div>
-              </div>
-              <article class="group rounded-2xl border border-slate-800 bg-slate-900/60 p-6 transition duration-200 hover:-translate-y-1 hover:bg-slate-900 hover:shadow-xl hover:shadow-emerald-500/10">
-                <div class="flex items-center justify-between gap-3">
-                  <h3 class="text-lg md:text-xl font-semibold text-slate-100">Instructional Aide</h3>
-                  <span class="text-xs px-2 py-1 rounded-full border border-sky-500/30 text-sky-300 bg-sky-500/10">Academic</span>
-                </div>
-                <div class="mt-1 text-emerald-300">Arizona State University</div>
-                <div class="mt-2 flex flex-wrap gap-3 text-sm text-slate-400">
-                  <span class="inline-flex items-center gap-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3M3 9h18M5 12h14m-14 4h10m-12 2a2 2 0 01-2-2V7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5z"/></svg>
-                    2023 – 2024
-                  </span>
-                  <span class="inline-flex items-center gap-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 11a3 3 0 100-6 3 3 0 000 6zm0 0c-4.418 0-8 2.239-8 5v2h16v-2c0-2.761-3.582-5-8-5z"/></svg>
-                    Tempe, AZ
-                  </span>
-                </div>
+              <div class="hidden md:block absolute left-[-6px] top-3"><div class="dot"></div></div>
+              <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 transition duration-200 hover:-translate-y-1 hover:bg-slate-900">
+                <div class="flex items-center justify-between gap-3"><h3 class="text-lg md:text-xl font-semibold text-slate-100">AI/Backend Software Engineering Intern</h3><span class="text-xs px-2 py-1 rounded-full border border-sky-500/30 text-sky-300 bg-sky-500/10">Current</span></div>
+                <div class="mt-1 text-emerald-300">Grey-Box - Project CyberCafe</div>
+                <div class="mt-2 text-sm text-slate-400">Sept 2025 - Present</div>
                 <ul class="mt-4 space-y-2 text-slate-300 text-sm leading-relaxed">
-                  <li>Mentored <strong>20+ first-year students</strong> across CS fundamentals and university tooling.</li>
-                  <li>Increased participation in academic resources by <strong>40%</strong> and helped achieve <strong>95%</strong> retention into the program.</li>
-                  <li>Drove time-management processes that improved overall productivity by <strong>35%</strong> and student satisfaction by <strong>30%</strong>.</li>
+                  <li>Designed and maintained 8+ RESTful API integrations across multiple microservices for consistent data flow across distributed AI systems.</li>
+                  <li>Optimized 12+ data pipelines processing 300K+ records daily, resolving 15+ synchronization issues through stronger validation and monitoring.</li>
+                  <li>Deployed services across 3 AWS environments with 10+ validation checkpoints to maintain reliable distributed service performance.</li>
                 </ul>
-                <div class="mt-4 flex flex-wrap gap-2 text-xs">
-                  <span class="px-2 py-1 rounded-full border border-slate-700 text-slate-200">Mentorship</span>
-                  <span class="px-2 py-1 rounded-full border border-slate-700 text-slate-200">Leadership</span>
-                  <span class="px-2 py-1 rounded-full border border-slate-700 text-slate-200">Communication</span>
-                </div>
+                <div class="mt-4 flex flex-wrap gap-2 text-xs"><span class="px-2 py-1 rounded-full border border-slate-700 text-slate-200">REST APIs</span><span class="px-2 py-1 rounded-full border border-slate-700 text-slate-200">Microservices</span><span class="px-2 py-1 rounded-full border border-slate-700 text-slate-200">AWS</span><span class="px-2 py-1 rounded-full border border-slate-700 text-slate-200">Data Pipelines</span></div>
+              </article>
+            </div>
+          </div>
+
+          <div class="md:grid md:grid-cols-2 md:gap-10 items-start">
+            <div class="relative md:pr-10 md:justify-self-end w-full reveal">
+              <div class="hidden md:block absolute right-[-6px] top-3"><div class="dot"></div></div>
+              <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 transition duration-200 hover:-translate-y-1 hover:bg-slate-900">
+                <h3 class="text-lg md:text-xl font-semibold text-slate-100">Backend Software Engineering Intern</h3>
+                <div class="mt-1 text-emerald-300">SVSRco</div>
+                <div class="mt-2 text-sm text-slate-400">May 2025 - Aug 2025</div>
+                <ul class="mt-4 space-y-2 text-slate-300 text-sm leading-relaxed">
+                  <li>Developed scalable backend API services with 20+ endpoints handling 3K+ daily requests at under 200ms response time.</li>
+                  <li>Engineered cross-system data integrations across 6 platforms, handling 120K+ transactions with consistent data flow.</li>
+                  <li>Troubleshot 25+ production incidents with logging and monitoring tools, reducing recurring issues and improving mean time to resolution.</li>
+                </ul>
+                <div class="mt-4 flex flex-wrap gap-2 text-xs"><span class="px-2 py-1 rounded-full border border-slate-700 text-slate-200">Backend APIs</span><span class="px-2 py-1 rounded-full border border-slate-700 text-slate-200">Integrations</span><span class="px-2 py-1 rounded-full border border-slate-700 text-slate-200">Monitoring</span></div>
+              </article>
+            </div>
+            <div class="hidden md:block"></div>
+          </div>
+
+          <div class="md:grid md:grid-cols-2 md:gap-10 items-start">
+            <div class="hidden md:block"></div>
+            <div class="relative md:pl-10 w-full reveal">
+              <div class="hidden md:block absolute left-[-6px] top-3"><div class="dot"></div></div>
+              <article class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 transition duration-200 hover:-translate-y-1 hover:bg-slate-900">
+                <h3 class="text-lg md:text-xl font-semibold text-slate-100">Instructional Aide</h3>
+                <div class="mt-1 text-emerald-300">Arizona State University</div>
+                <div class="mt-2 text-sm text-slate-400">Aug 2023 - Dec 2023</div>
+                <ul class="mt-4 space-y-2 text-slate-300 text-sm leading-relaxed">
+                  <li>Guided 120+ students across 4 lab sections in algorithmic problem-solving and system design through 30+ office hours.</li>
+                  <li>Conducted 200+ code reviews, improving code structure, debugging practices, and development standards.</li>
+                </ul>
+                <div class="mt-4 flex flex-wrap gap-2 text-xs"><span class="px-2 py-1 rounded-full border border-slate-700 text-slate-200">Mentorship</span><span class="px-2 py-1 rounded-full border border-slate-700 text-slate-200">Code Review</span><span class="px-2 py-1 rounded-full border border-slate-700 text-slate-200">Algorithms</span></div>
               </article>
             </div>
           </div>
         </div>
       </div>
-
     </section>
   </main>
 
+  <footer class="bg-slate-950 text-slate-300 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <p class="text-slate-400">AI backend engineer focused on agentic systems, RAG, scalable APIs, and cloud infrastructure.</p>
+      <p class="text-sm text-slate-500">&copy; <span id="year"></span> Anudeep Cherukupalli.</p>
+    </div>
+  </footer>
+
   <script>
     document.documentElement.classList.add('dark');
-    // highlight current page link
-    (function(){ 
-      const href = 'experience.html';
-      document.querySelectorAll('nav a.nav-link').forEach(a => {
-        if (a.getAttribute('href') === href) a.classList.add('active');
-      });
-    })();
-
-    // hide-on-scroll header
     (function(){
       const header = document.querySelector('header');
       let lastY = window.pageYOffset || document.documentElement.scrollTop;
@@ -157,58 +140,14 @@
         lastY = y;
       }, { passive: true });
     })();
-
-    // quick reveal on scroll (respect reduced motion)
     (function(){
       const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const els = document.querySelectorAll('.reveal');
       if (prefersReduced){ els.forEach(el=>el.classList.add('show')); return; }
-      const io = new IntersectionObserver((entries)=>{
-        entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });
-      }, {threshold:0.15});
+      const io = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} }); }, {threshold:0.15});
       els.forEach(el=>io.observe(el));
     })();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-  <!-- Footer -->
-<footer class="bg-slate-950 text-slate-300 border-t border-slate-800 mt-24">
-  <div class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10">
-    
-    <!-- Left Section -->
-    <div>
-      <h2 class="text-emerald-400 font-bold text-lg">Anudeep Cherukupalli</h2>
-      <p class="mt-2 text-slate-400">
-        B.S. in Computer Science passionate about full-stack development,
-        systems, and clean UX.
-      </p>
-    </div>
-    
-    <!-- Middle Section -->
-    <div>
-      <h3 class="font-semibold text-slate-100 mb-3">Quick Links</h3>
-      <ul class="space-y-2">
-        <li><a href="index.html" class="hover:text-emerald-400">Home</a></li>
-        <li><a href="about.html" class="hover:text-emerald-400">About</a></li>
-        <li><a href="experience.html" class="hover:text-emerald-400">Experience</a></li>
-        <li><a href="projects.html" class="hover:text-emerald-400">Projects</a></li>
-        <li><a href="contact.html" class="hover:text-emerald-400">Contact</a></li>
-      </ul>
-    </div>
-    
-    <!-- Right Section -->
-    <div>
-      <h3 class="font-semibold text-slate-100 mb-3">Connect</h3>
-      <ul class="space-y-2">
-        <li><a href="mailto:c.anudeep06@gmail.com" class="hover:text-emerald-400">Email</a></li>
-        <li><a href="https://www.linkedin.com/in/anudeep-" target="_blank" class="hover:text-emerald-400">LinkedIn</a></li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="border-t border-slate-800 text-center py-6 text-sm text-slate-500">
-    © 2025 Anudeep Cherukupalli. All rights reserved.
-    <br />
-    Built with <span class="text-sky-400">HTML</span>, <span class="text-sky-500">Tailwind CSS</span>, and <span class="text-red-500">❤️</span>
-  </div>
-</footer>
 </body>
 </html>

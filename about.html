@@ -3,28 +3,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>About — Anudeep Cherukupalli</title>
+  <title>About - Anudeep Cherukupalli</title>
   <meta name="theme-color" content="#0ea5e9" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config={darkMode:'class'};</script>
   <style>
-    header{transition:transform .35s ease, opacity .25s ease}
+    header{transition:transform .35s ease,opacity .25s ease}
     .header-hidden{transform:translate(-50%,-160%);opacity:0;pointer-events:none}
     .nav-link{position:relative}
-    .nav-link.active::after{content:'';position:absolute;left:0;right:0;bottom:-8px;height:2px;background:linear-gradient(90deg,#06b6d4,#3b82f6);border-radius:9999px}
+    .nav-link.active::after{content:'';position:absolute;left:0;right:0;bottom:-8px;height:2px;background:linear-gradient(90deg,#10b981,#38bdf8);border-radius:9999px}
     .space-gradient{background:linear-gradient(180deg,#0b1324 0%,#020617 100%)}
   </style>
 </head>
 <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
   <header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-5xl px-4 will-change-transform">
-    <div class="backdrop-blur bg-slate-900/60 border border-slate-800 rounded-2xl">
+    <div class="backdrop-blur bg-slate-900/70 border border-slate-800 rounded-2xl">
       <div class="h-14 flex items-center justify-between px-4">
-        <a href="index.html" class="font-bold tracking-tight text-slate-100">
-          <span class="px-2 py-1 rounded-lg bg-gradient-to-r from-emerald-400/20 to-cyan-400/20 border border-emerald-500/30 text-emerald-200">Anudeep Cherukupalli</span>
-        </a>
+        <a href="index.html" class="font-bold tracking-tight text-slate-100"><span class="px-2 py-1 rounded-lg bg-gradient-to-r from-emerald-400/20 to-cyan-400/20 border border-emerald-500/30 text-emerald-200">Anudeep Cherukupalli</span></a>
         <nav class="hidden md:flex items-center gap-6 text-[15px] text-slate-200 font-medium">
           <a class="hover:text-emerald-300 nav-link" href="index.html">Home</a>
-          <a class="hover:text-emerald-300 nav-link" href="about.html">About</a>
+          <a class="hover:text-emerald-300 nav-link active" href="about.html">About</a>
           <a class="hover:text-emerald-300 nav-link" href="experience.html">Experience</a>
           <a class="hover:text-emerald-300 nav-link" href="projects.html">Projects</a>
           <a class="hover:text-emerald-300 nav-link" href="contact.html">Contact</a>
@@ -35,148 +33,57 @@
 
   <main class="space-gradient min-h-screen pt-28">
     <section class="max-w-6xl mx-auto px-6 pb-24">
-      <!-- Title + tagline -->
-      <h1 class="text-center text-4xl md:text-6xl font-extrabold text-slate-100">
-        About <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-teal-300 to-sky-400">Me</span>
-      </h1>
-      <p class="mt-4 text-center text-slate-400 max-w-3xl mx-auto">
-        Passionate about building reliable systems and user-friendly products at the intersection of
-        full-stack development, test-driven engineering, and cloud technologies.
-      </p>
+      <h1 class="text-center text-4xl md:text-6xl font-extrabold text-slate-100">About <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-teal-300 to-sky-400">Me</span></h1>
+      <p class="mt-4 text-center text-slate-400 max-w-3xl mx-auto">AI/backend software engineer focused on agentic systems, reliable APIs, retrieval infrastructure, and production-ready cloud services.</p>
 
-      <!-- Two-column layout -->
       <div class="mt-12 grid md:grid-cols-2 gap-8">
-        <!-- Left: narrative -->
-        <div class="space-y-6 text-slate-300">
-          <p>
-            Hi! I'm <span class="font-semibold text-slate-100">Anudeep Cherukupalli</span>, a
-            B.S. in Computer Science student at Arizona State University (GPA&nbsp;3.63). I enjoy turning ideas
-            into scalable software with clean UX and a focus on maintainability and tests.
-          </p>
-
-          <p>
-            Recently, as an <span class="font-medium">Instructional Aide</span> at ASU,
-            I mentored 20+ first-year students and helped boost participation in academic resources by 40%,
-            while initiatives around time-management and university tools improved productivity by 35%.
-            We achieved a 95% retention rate into the computing program and raised student satisfaction by 30%.
-          </p>
-
-          <p>
-            As a <span class="font-medium">Software Engineering Intern</span>, I built REST APIs with
-            Spring Boot, integrated optimized MySQL schemas, and implemented JWT-based auth.
-            That work cut response times by ~30%, improved data retrieval by ~25%, and increased test coverage to 60%
-            through JUnit and integration tests—all delivered on-time in a tight, cross-functional team.
-          </p>
-
-          <p>
-            On the side, I’m building projects like a
-            <span class="font-medium">Student Management System</span> (Java, Angular) for role-based student/course
-            workflows and <span class="font-medium">Admin Gate</span>, a helpdesk with OTP auth and content management.
-            These have sharpened my end-to-end development, security, and testing skills.
-          </p>
+        <div class="space-y-6 text-slate-300 leading-relaxed">
+          <p>I'm <span class="font-semibold text-slate-100">Anudeep Cherukupalli</span>, a Computer Science student at Arizona State University graduating in May 2026 with a 3.6 GPA.</p>
+          <p>My current work centers on AI systems and backend platforms. At Qbotica, I architect agentic AI workflows with LLMs, LangChain, and LangGraph for logistics automation, connecting TMS/ERP systems, email, APIs, RPA, and computer-use agents.</p>
+          <p>At Grey-Box's Project CyberCafe, I design API integrations and data pipelines for distributed AI services, including systems that process 300K+ records daily. At SVSRco, I built backend API services with 20+ endpoints handling 3K+ daily requests under 200ms response time.</p>
+          <p>I like work where model behavior, backend reliability, data quality, and observability meet. My strongest areas are Python, TypeScript, SQL, FastAPI, REST APIs, RAG, multi-agent systems, AWS, Docker, Kubernetes, PostgreSQL, Redis, Kafka, and OpenTelemetry.</p>
         </div>
 
-        <!-- Right: education + awards -->
         <div class="space-y-6">
-          <!-- Education card -->
           <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
-            <div class="flex items-start gap-4">
-              <!-- Mortarboard icon -->
-              <div class="h-10 w-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 grid place-items-center text-emerald-300 shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                        d="M3 7l9-4 9 4-9 4-9-4zm0 6v-5l9 4 9-4v5M7 13v5a5 5 0 0010 0v-5"/>
-                </svg>
-              </div>
-              <div class="min-w-0">
-                <h3 class="text-lg md:text-xl font-semibold text-slate-100">
-                  Bachelor of Science in Computer Science
-                </h3>
-                <div class="mt-1 text-emerald-300">Arizona State University</div>
-                <div class="mt-2 flex flex-wrap items-center gap-3 text-sm text-slate-400">
-                  <!-- Calendar -->
-                  <span class="inline-flex items-center gap-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="M8 7V3m8 4V3M3 9h18M5 12h14m-14 4h10m-12 2a2 2 0 01-2-2V7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5z"/>
-                    </svg>
-                    Aug 2022 – May 2026
-                  </span>
-                  <!-- Location -->
-                  <span class="inline-flex items-center gap-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                            d="M12 11a3 3 0 100-6 3 3 0 000 6zm0 0c-4.418 0-8 2.239-8 5v2h16v-2c0-2.761-3.582-5-8-5z"/>
-                    </svg>
-                    Tempe, AZ
-                  </span>
-                </div>
-                <div class="mt-2 text-sm text-slate-300"><span class="font-medium">GPA:</span> 3.63 / 4.00</div>
-              </div>
-            </div>
+            <h3 class="text-lg md:text-xl font-semibold text-slate-100">Education</h3>
+            <div class="mt-2 text-emerald-300">Arizona State University</div>
+            <div class="mt-3 text-sm text-slate-300">Bachelor of Science in Computer Science</div>
+            <div class="mt-2 text-sm text-slate-400">Graduation: May 2026</div>
+            <div class="mt-2 text-sm text-slate-400">GPA: 3.6 / 4.00</div>
           </div>
 
-          <!-- Awards card -->
-<div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
-  <h4 class="font-semibold text-slate-100">Awards & Honors</h4>
-  <ul class="mt-3 space-y-2 text-slate-300">
-    <li class="flex items-start gap-2">
-      <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
-      Dean’s List
-    </li>
-    <li class="flex items-start gap-2">
-      <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
-      New American University Scholarship
-    </li>
-  </ul>
+          <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+            <h3 class="text-lg md:text-xl font-semibold text-slate-100">Recognition</h3>
+            <ul class="mt-3 space-y-2 text-slate-300">
+              <li>Dean's List</li>
+              <li>New American University Scholarship</li>
+              <li>Claude Certified Architect - Foundations, Anthropic, 2026</li>
+            </ul>
+          </div>
 
-  <!-- Social Links -->
-  <div class="mt-5 flex gap-4">
-    <!-- GitHub -->
-    <a href="https://github.com/x-anudeep" target="_blank" rel="noreferrer noopener"
-       class="p-2 rounded-full border border-slate-700 hover:border-emerald-400 hover:text-emerald-400 text-slate-300">
-      <!-- GitHub Icon SVG -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-        <path fill-rule="evenodd" d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008 10.95c.58.1.8-.25.8-.56v-2.05c-3.25.7-3.93-1.56-3.93-1.56-.53-1.34-1.3-1.7-1.3-1.7-1.07-.73.08-.72.08-.72 1.18.08 1.8 1.22 1.8 1.22 1.05 1.8 2.75 1.28 3.42.98.1-.76.41-1.28.75-1.57-2.6-.3-5.33-1.3-5.33-5.77 0-1.28.46-2.33 1.22-3.15-.12-.3-.53-1.5.12-3.1 0 0 .99-.32 3.25 1.2a11.3 11.3 0 015.9 0c2.26-1.52 3.25-1.2 3.25-1.2.65 1.6.24 2.8.12 3.1.76.82 1.22 1.87 1.22 3.15 0 4.48-2.74 5.46-5.35 5.76.42.37.8 1.1.8 2.22v3.3c0 .31.22.67.81.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z" clip-rule="evenodd"/>
-      </svg>
-    </a>
-
-    <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/in/anudeep-cherukupalli/" target="_blank" rel="noreferrer noopener"
-       class="p-2 rounded-full border border-slate-700 hover:border-emerald-400 hover:text-emerald-400 text-slate-300">
-      <!-- LinkedIn Icon SVG -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M4.98 3.5a2.5 2.5 0 11-.01 5.01 2.5 2.5 0 01.01-5.01M3 9h4v12H3zm7 0h3.6v1.71h.05c.5-.9 1.75-1.85 3.6-1.85 3.85 0 4.55 2.53 4.55 5.82V21H19v-5.19c0-1.24-.02-2.84-1.73-2.84-1.74 0-2.01 1.36-2.01 2.76V21h-4z"/>
-      </svg>
-    </a>
-
-    <!-- Email -->
-    <a href="mailto:c.anudeep06@gmail.com"
-       class="p-2 rounded-full border border-slate-700 hover:border-emerald-400 hover:text-emerald-400 text-slate-300">
-      <!-- Email Icon SVG -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M2.25 4.5A2.25 2.25 0 014.5 2.25h15a2.25 2.25 0 012.25 2.25v15a2.25 2.25 0 01-2.25 2.25h-15A2.25 2.25 0 012.25 19.5v-15zm1.5 0v.38l8.25 6.5 8.25-6.5V4.5h-16.5zm16.5 15v-9.12l-8.25 6.5-8.25-6.5V19.5h16.5z"/>
-      </svg>
-    </a>
-  </div>
-</div>
-
+          <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+            <h3 class="text-lg md:text-xl font-semibold text-slate-100">Links</h3>
+            <div class="mt-4 flex flex-wrap gap-3">
+              <a href="mailto:c.anudeep06@gmail.com" class="rounded-xl border border-slate-700 px-4 py-2 text-slate-200 hover:text-emerald-300">Email</a>
+              <a href="https://www.linkedin.com/in/anudeep-cherukupalli/" target="_blank" rel="noreferrer noopener" class="rounded-xl border border-slate-700 px-4 py-2 text-slate-200 hover:text-emerald-300">LinkedIn</a>
+              <a href="https://github.com/x-anudeep" target="_blank" rel="noreferrer noopener" class="rounded-xl border border-slate-700 px-4 py-2 text-slate-200 hover:text-emerald-300">GitHub</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <footer class="bg-slate-950 text-slate-300 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <p class="text-slate-400">AI backend engineer focused on agentic systems, RAG, scalable APIs, and cloud infrastructure.</p>
+      <p class="text-sm text-slate-500">&copy; <span id="year"></span> Anudeep Cherukupalli.</p>
+    </div>
+  </footer>
+
   <script>
     document.documentElement.classList.add('dark');
-    // highlight current page link
-    (function(){ 
-      const href = 'about.html';
-      document.querySelectorAll('nav a.nav-link').forEach(a => {
-        if (a.getAttribute('href') === href) a.classList.add('active');
-      });
-    })();
-
-    // hide-on-scroll header
     (function(){
       const header = document.querySelector('header');
       let lastY = window.pageYOffset || document.documentElement.scrollTop;
@@ -190,47 +97,7 @@
         lastY = y;
       }, { passive: true });
     })();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-  <!-- Footer -->
-<footer class="bg-slate-950 text-slate-300 border-t border-slate-800 mt-24">
-  <div class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10">
-    
-    <!-- Left Section -->
-    <div>
-      <h2 class="text-emerald-400 font-bold text-lg">Anudeep Cherukupalli</h2>
-      <p class="mt-2 text-slate-400">
-        B.S. in Computer Science passionate about full-stack development,
-        systems, and clean UX.
-      </p>
-    </div>
-    
-    <!-- Middle Section -->
-    <div>
-      <h3 class="font-semibold text-slate-100 mb-3">Quick Links</h3>
-      <ul class="space-y-2">
-        <li><a href="index.html" class="hover:text-emerald-400">Home</a></li>
-        <li><a href="about.html" class="hover:text-emerald-400">About</a></li>
-        <li><a href="experience.html" class="hover:text-emerald-400">Experience</a></li>
-        <li><a href="projects.html" class="hover:text-emerald-400">Projects</a></li>
-        <li><a href="contact.html" class="hover:text-emerald-400">Contact</a></li>
-      </ul>
-    </div>
-    
-    <!-- Right Section -->
-    <div>
-      <h3 class="font-semibold text-slate-100 mb-3">Connect</h3>
-      <ul class="space-y-2">
-        <li><a href="mailto:c.anudeep06@gmail.com" class="hover:text-emerald-400">Email</a></li>
-        <li><a href="https://www.linkedin.com/in/anudeep-" target="_blank" class="hover:text-emerald-400">LinkedIn</a></li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="border-t border-slate-800 text-center py-6 text-sm text-slate-500">
-    © 2025 Anudeep Cherukupalli. All rights reserved.
-    <br />
-    Built with <span class="text-sky-400">HTML</span>, <span class="text-sky-500">Tailwind CSS</span>, and <span class="text-red-500">❤️</span>
-  </div>
-</footer>
 </body>
 </html>

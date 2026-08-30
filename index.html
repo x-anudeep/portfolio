@@ -3,100 +3,51 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Anudeep Cherukupalli — Portfolio</title>
-  <meta name="description" content="Portfolio of Anudeep Cherukupalli — CS @ ASU. Full-stack engineering, systems, and testing." />
-  <meta property="og:title" content="Anudeep Cherukupalli — Portfolio" />
-  <meta property="og:description" content="Full-stack engineering, systems, and testing." />
+  <title>Anudeep Cherukupalli - AI Backend Engineer</title>
+  <meta name="description" content="Portfolio of Anudeep Cherukupalli - AI software engineering, backend systems, agentic AI, RAG, and cloud infrastructure." />
+  <meta property="og:title" content="Anudeep Cherukupalli - AI Backend Engineer" />
+  <meta property="og:description" content="AI software engineering, backend systems, agentic AI, RAG, and cloud infrastructure." />
   <meta name="theme-color" content="#0ea5e9" />
-
-  <!-- Inter font -->
-  <!-- Google Fonts removed for offline preview. Using system font fallback. -->
-
-  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
-          colors: {
-            brand: {
-              50: '#ecfeff', 100: '#cffafe', 200: '#a5f3fc', 300: '#67e8f9',
-              400: '#22d3ee', 500: '#06b6d4', 600: '#0891b2', 700: '#0e7490',
-              800: '#155e75', 900: '#164e63'
-            }
-          },
-          boxShadow: {
-            soft: '0 10px 30px rgba(2,132,199,0.15)'
-          }
-        }
-      }
+      theme: { extend: { fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] }, boxShadow: { soft: '0 10px 30px rgba(2,132,199,0.15)' } } }
     }
   </script>
   <style>
-    /* Simple fade/slide-in when scrolled into view */
-    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
-    .reveal.in-view { opacity: 1; transform: translateY(0); }
-    /* Active section underline */
-    .nav-link { position: relative; }
-    .nav-link.active::after { content: ''; position: absolute; left: 0; right: 0; bottom: -8px; height: 2px; background: linear-gradient(90deg,#06b6d4,#3b82f6); border-radius: 9999px; }
-  </style>
-  <style>
-    /* Hide-on-scroll header */
-    header{transition:transform .35s ease, opacity .25s ease}
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.in-view{opacity:1;transform:translateY(0)}
+    .nav-link{position:relative}
+    .nav-link.active::after{content:'';position:absolute;left:0;right:0;bottom:-8px;height:2px;background:linear-gradient(90deg,#10b981,#38bdf8);border-radius:9999px}
+    header{transition:transform .35s ease,opacity .25s ease}
     .header-hidden{transform:translate(-50%,-160%);opacity:0;pointer-events:none}
-  </style>
-  <style>
-    /* Space gradient + star canvas */
-    .space-gradient{background:
-      radial-gradient(1200px 600px at 50% -10%,rgba(56,189,248,.15),rgba(15,23,42,.05) 60%,transparent 80%),
-      radial-gradient(800px 400px at 90% 10%,rgba(147,197,253,.08),transparent 60%),
-      linear-gradient(180deg,#0b1324 0%,#020617 100%)}
+    .space-gradient{background:radial-gradient(1000px 520px at 50% -10%,rgba(56,189,248,.15),rgba(15,23,42,.05) 62%,transparent 80%),radial-gradient(760px 420px at 90% 10%,rgba(16,185,129,.09),transparent 60%),linear-gradient(180deg,#0b1324 0%,#020617 100%)}
     #starfield{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;z-index:0}
     .hero-content{position:relative;z-index:1}
-  </style>
-  <style>
-    /* Featured card interactions */
-    .card-3d{perspective:1000px}
-    .tilt{transform-style:preserve-3d;will-change:transform;transition:transform .2s ease}
-    .tilt-reset{transform:rotateX(0) rotateY(0) translateZ(0)}
-    .shine{position:absolute;inset:0;pointer-events:none;background:radial-gradient(600px 300px at var(--mx,50%) var(--my,50%),rgba(16,185,129,.18),transparent 60%);opacity:0;transition:opacity .3s ease}
-    .card:hover .shine{opacity:1}
-    .chip{background:linear-gradient(90deg,rgba(148,163,184,.15),rgba(16,185,129,.25),rgba(148,163,184,.15));background-size:200% 100%;animation:chip 8s linear infinite}
-    @keyframes chip{0%{background-position:0 0}100%{background-position:200% 0}}
-  </style>
-  <style>
-    /* Skill meters */
+    .section-featured{background:linear-gradient(180deg,#08172e 0%,#0a1324 100%)}
+    .section-skills{background:linear-gradient(180deg,#142436 0%,#101827 100%)}
     .meter{height:8px;border-radius:9999px;background:rgba(15,23,42,.6);border:1px solid rgba(51,65,85,.6);overflow:hidden}
     .meter-progress{height:100%;width:0%;border-radius:9999px;background:linear-gradient(90deg,#34d399,#22d3ee);box-shadow:0 0 16px rgba(34,211,238,.25);transition:width 1.2s ease}
-  </style>
-  <style>
-    /* Section backgrounds per request */
-    .section-featured{background:linear-gradient(180deg,#091a3a 0%,#0a1324 100%);} /* dark blue */
-    .section-skills{background:linear-gradient(180deg,#233241 0%,#1f2b38 100%);} /* light brownish-blue */
+    .shine{position:absolute;inset:0;pointer-events:none;background:radial-gradient(600px 300px at var(--mx,50%) var(--my,50%),rgba(16,185,129,.16),transparent 60%);opacity:0;transition:opacity .3s ease}
+    .card:hover .shine{opacity:1}
   </style>
 </head>
 <body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
-  <!-- Top bar -->
-  <header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-5xl px-4 will-change-transform transition-transform duration-300">
-    <div class="backdrop-blur bg-slate-900/60 border border-slate-800 rounded-2xl shadow-soft bar">
-      <div class="h-14 flex items-center justify-between px-4 row">
-        <a href="#home" class="font-bold tracking-tight text-slate-100">
-          <span class="px-2 py-1 rounded-lg bg-gradient-to-r from-emerald-400/20 to-cyan-400/20 border border-emerald-500/30 text-emerald-200">Anudeep Cherukupalli</span>
-        </a>
+  <header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-5xl px-4 will-change-transform">
+    <div class="backdrop-blur bg-slate-900/70 border border-slate-800 rounded-2xl shadow-soft">
+      <div class="h-14 flex items-center justify-between px-4">
+        <a href="#home" class="font-bold tracking-tight text-slate-100"><span class="px-2 py-1 rounded-lg bg-gradient-to-r from-emerald-400/20 to-cyan-400/20 border border-emerald-500/30 text-emerald-200">Anudeep Cherukupalli</span></a>
         <nav class="hidden md:flex items-center gap-6 text-[15px] text-slate-200 font-medium">
-          <a class="hover:text-emerald-300 nav-link" href="#home">Home</a>
+          <a class="hover:text-emerald-300 nav-link active" href="#home">Home</a>
           <a class="hover:text-emerald-300 nav-link" href="about.html">About</a>
           <a class="hover:text-emerald-300 nav-link" href="experience.html">Experience</a>
           <a class="hover:text-emerald-300 nav-link" href="projects.html">Projects</a>
           <a class="hover:text-emerald-300 nav-link" href="contact.html">Contact</a>
         </nav>
-        <div class="flex items-center gap-2">
-          <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl border border-slate-700/60 px-3 py-2 text-sm text-slate-200">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          </button>
-        </div>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl border border-slate-700/60 px-3 py-2 text-sm text-slate-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
       </div>
       <div id="mobileMenu" class="md:hidden hidden pb-3 px-4">
         <div class="flex flex-col gap-2 text-[15px] font-medium text-slate-200">
@@ -110,487 +61,189 @@
     </div>
   </header>
 
-  <!-- Hero -->
   <section id="home" class="relative overflow-hidden space-gradient min-h-[92vh] sm:min-h-screen grid place-items-center">
     <canvas id="starfield" aria-hidden="true"></canvas>
-    <div class="hero-content text-center px-4">
-      <p class="text-slate-300">Hello, I’m</p>
-      <h1 class="mt-2 text-5xl sm:text-6xl md:text-7xl font-extrabold leading-[1.05] bg-clip-text text-transparent bg-gradient-to-r from-slate-200 via-sky-200 to-indigo-200">Anudeep Cherukupalli</h1>
-      <p class="mt-4 text-slate-300/90">B.S. in Computer Science</p>
-      <p class="mt-1 text-emerald-300 font-semibold"><span id="typewrite"></span><span class="text-emerald-300" id="caret">|</span></p>
-      <div class="mt-6 flex items-center justify-center gap-3">
-        <a href="projects.html" 
-           class="inline-flex items-center gap-2 rounded-xl bg-slate-800 hover:bg-slate-700 px-4 py-2.5 text-slate-100 border border-slate-700">
-           View All Projects →
-        </a>
-        <a href="contact.html" class="inline-flex items-center gap-2 rounded-xl bg-slate-900/80 hover:bg-slate-800 px-5 py-2.5 text-slate-100 font-semibold border border-slate-700/60 btn btn-secondary">Get In Touch</a>
+    <div class="hero-content text-center px-4 max-w-5xl">
+      <p class="text-slate-300">Hello, I'm</p>
+      <h1 class="mt-2 text-5xl sm:text-6xl md:text-7xl font-extrabold leading-[1.05] bg-clip-text text-transparent bg-gradient-to-r from-slate-200 via-sky-200 to-emerald-200">Anudeep Cherukupalli</h1>
+      <p class="mt-4 text-slate-300/90">B.S. Computer Science, Arizona State University - May 2026</p>
+      <p class="mt-1 text-emerald-300 font-semibold"><span id="typewrite"></span><span id="caret">|</span></p>
+      <p class="mt-5 mx-auto max-w-3xl text-slate-300 leading-relaxed">AI software engineering intern building agentic workflows, backend platforms, RAG systems, data pipelines, and cloud services across logistics, enterprise automation, and distributed AI products.</p>
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <a href="projects.html" class="inline-flex items-center gap-2 rounded-xl bg-emerald-600/90 hover:bg-emerald-500 px-4 py-2.5 text-white font-semibold">View Projects</a>
+        <a href="contact.html" class="inline-flex items-center gap-2 rounded-xl bg-slate-900/80 hover:bg-slate-800 px-5 py-2.5 text-slate-100 font-semibold border border-slate-700/60">Get In Touch</a>
       </div>
     </div>
   </section>
 
-  <!-- Featured Projects (first after hero) -->
   <section id="all-projects" class="py-24 section-featured">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center reveal">
         <h2 class="text-3xl font-extrabold text-slate-100">Featured Projects</h2>
-        <p class="mt-2 text-slate-400">A selection of my recent work showcasing full‑stack development and systems.</p>
+        <p class="mt-2 text-slate-400">A preview of the 8 strongest GitHub projects selected for my AI/backend resume narrative.</p>
       </div>
-
-      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8 mx-auto max-w-4xl cards centered">
-        <!-- Student Management System -->
-        <article class="card group relative rounded-2xl border border-slate-800 bg-slate-900/60 hover:bg-slate-900/80 overflow-hidden card-3d reveal" data-tilt>
+      <div class="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <article class="card relative rounded-2xl border border-slate-800 bg-slate-900/60 p-6 overflow-hidden reveal">
           <div class="shine"></div>
-          <div class="tilt p-0">
-            <div class="aspect-video relative overflow-hidden bg-slate-800">
-              <img src="./student.png"
-                   alt="Student Management System – homepage"
-                   class="absolute inset-0 w-full h-full object-cover"
-                   loading="lazy" />
-            </div>
-            <div class="p-6">
-              <h3 class="font-semibold text-slate-100">Student Management System | Role‑based Platform</h3>
-              <p class="mt-2 text-sm text-slate-300">Full‑stack app for student/course management with secure auth and performance tracking.</p>
-              <ul class="mt-3 space-y-1 text-sm text-slate-400 list-disc list-inside">
-                <li>Role‑based access; enrollment & course assignment</li>
-                <li>Performance tracking; optimized SQL queries</li>
-              </ul>
-              <div class="mt-4 flex flex-wrap gap-2 text-xs">
-                <span class="px-2 py-1 rounded-full chip border border-slate-700 text-slate-200">Java</span>
-                <span class="px-2 py-1 rounded-full chip border border-slate-700 text-slate-200">Angular</span>
-                <span class="px-2 py-1 rounded-full chip border border-slate-700 text-slate-200">Spring</span>
-                <span class="px-2 py-1 rounded-full chip border border-slate-700 text-slate-200">SQL</span>
-              </div>
-              <div class="mt-5 flex items-center gap-3 text-sm">
-                <a class="inline-flex items-center gap-2 rounded-xl bg-slate-800 hover:bg-slate-700 px-3 py-2 text-slate-100 border border-slate-700" target="_blank" rel="noreferrer noopener" href="https://github.com/x-anudeep/student-management-system">
-                  <span>Code</span>
-                </a>
-                <a class="inline-flex items-center gap-2 rounded-xl bg-emerald-600/90 hover:bg-emerald-500 px-3 py-2 text-white"
-                   href="https://x-anudeep.github.io/home" target="_blank" rel="noreferrer noopener">
-                   <span>Demo</span>
-                </a>
-              </div>
-            </div>
-          </div>
+          <div class="text-xs uppercase tracking-[0.2em] text-emerald-300">Agentic AI</div>
+          <h3 class="mt-3 text-xl font-semibold text-slate-100">Multi-Agent Intelligence Engine</h3>
+          <p class="mt-3 text-sm text-slate-300">LangGraph system with 5 specialized agents for research, risk scoring, compliance, reporting, and human review workflows.</p>
+          <div class="mt-5 flex flex-wrap gap-2 text-xs text-slate-200"><span class="px-2 py-1 rounded-full border border-slate-700">LangGraph</span><span class="px-2 py-1 rounded-full border border-slate-700">Python</span><span class="px-2 py-1 rounded-full border border-slate-700">Redis</span><span class="px-2 py-1 rounded-full border border-slate-700">OpenTelemetry</span></div>
         </article>
-
-        <!-- Admin Gate -->
-        <article class="card group relative rounded-2xl border border-slate-800 bg-slate-900/60 hover:bg-slate-900/80 overflow-hidden card-3d reveal" data-tilt>
+        <article class="card relative rounded-2xl border border-slate-800 bg-slate-900/60 p-6 overflow-hidden reveal">
           <div class="shine"></div>
-          <div class="tilt p-0">
-            <div class="aspect-video relative overflow-hidden bg-slate-800">
-              <img src="./admin.png"
-                   alt="Admin Gate — homepage"
-                   class="absolute inset-0 w-full h-full object-cover"
-                   loading="lazy">
-            </div>
-            <div class="p-6">
-              <h3 class="font-semibold text-slate-100">Admin Gate | Role‑based Helpdesk</h3>
-              <p class="mt-2 text-sm text-slate-300">Secure OTP login, password reset, and content management to streamline student–faculty support.</p>
-              <ul class="mt-3 space-y-1 text-sm text-slate-400 list-disc list-inside">
-                <li>Help articles: create, edit, delete, restore</li>
-                <li>Group messaging; improved support efficiency</li>
-              </ul>
-              <div class="mt-4 flex flex-wrap gap-2 text-xs">
-                <span class="px-2 py-1 rounded-full chip border border-slate-700 text-slate-200">Java</span>
-                <span class="px-2 py-1 rounded-full chip border border-slate-700 text-slate-200">Angular</span>
-                <span class="px-2 py-1 rounded-full chip border border-slate-700 text-slate-200">Git</span>
-              </div>
-              <div class="mt-5 flex items-center gap-3 text-sm">
-                <a class="inline-flex items-center gap-2 rounded-xl bg-slate-800 hover:bg-slate-700 px-3 py-2 text-slate-100 border border-slate-700" target="_blank" rel="noreferrer noopener" href="https://github.com/x-anudeep/AdminGate">
-                  <span>Code</span>
-                </a>
-              </div>
-            </div>
-          </div>
+          <div class="text-xs uppercase tracking-[0.2em] text-sky-300">RAG Evaluation</div>
+          <h3 class="mt-3 text-xl font-semibold text-slate-100">Enterprise RAG + Evaluation Harness</h3>
+          <p class="mt-3 text-sm text-slate-300">Hybrid retrieval over 1,000+ documents with semantic chunking, BM25, vector search, re-ranking, and RAGAS-compatible evaluation.</p>
+          <div class="mt-5 flex flex-wrap gap-2 text-xs text-slate-200"><span class="px-2 py-1 rounded-full border border-slate-700">Pinecone</span><span class="px-2 py-1 rounded-full border border-slate-700">pgvector</span><span class="px-2 py-1 rounded-full border border-slate-700">RAGAS</span><span class="px-2 py-1 rounded-full border border-slate-700">GitHub Actions</span></div>
+        </article>
+        <article class="card relative rounded-2xl border border-slate-800 bg-slate-900/60 p-6 overflow-hidden reveal">
+          <div class="shine"></div>
+          <div class="text-xs uppercase tracking-[0.2em] text-cyan-300">Workflow QA</div>
+          <h3 class="mt-3 text-xl font-semibold text-slate-100">WorkflowGuard</h3>
+          <p class="mt-3 text-sm text-slate-300">AI workflow verification platform for BPMN, JSON, and n8n workflows with static analysis, LLM-assisted review, and CI/CD quality gates.</p>
+          <div class="mt-5 flex flex-wrap gap-2 text-xs text-slate-200"><span class="px-2 py-1 rounded-full border border-slate-700">FastAPI</span><span class="px-2 py-1 rounded-full border border-slate-700">Next.js</span><span class="px-2 py-1 rounded-full border border-slate-700">PostgreSQL</span><span class="px-2 py-1 rounded-full border border-slate-700">LLM APIs</span></div>
         </article>
       </div>
-
       <div class="mt-10 text-center reveal">
-        <a href="projects.html" 
-           class="inline-flex items-center gap-2 rounded-xl bg-slate-800 hover:bg-slate-700 px-4 py-2.5 text-slate-100 border border-slate-700">
-           View All Projects →
-      </a>
+        <a href="projects.html" class="inline-flex items-center gap-2 rounded-xl bg-slate-800 hover:bg-slate-700 px-4 py-2.5 text-slate-100 border border-slate-700">View 8 Projects</a>
       </div>
     </div>
   </section>
-  <!-- Technical Skills (after Featured) -->
+
   <section id="skills" class="py-24 section-skills">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center reveal">
         <h2 class="text-3xl font-extrabold text-slate-100">Technical Skills</h2>
-        <p class="mt-2 text-slate-400">Proficient in modern web technologies and cloud platforms</p>
+        <p class="mt-2 text-slate-400">AI systems, backend engineering, cloud, data, and observability.</p>
       </div>
-
       <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Languages -->
         <div class="reveal rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
-          <div class="flex items-center justify-between">
-            <h3 class="font-semibold text-slate-100">Programming Languages</h3>
-            <span class="text-xs text-slate-400">4+</span>
-          </div>
+          <h3 class="font-semibold text-slate-100">Languages</h3>
           <div class="mt-4 space-y-4 text-sm">
-            <div>
-              <div class="flex items-center justify-between text-slate-300"><span>Java</span><span>90%</span></div>
-              <div class="meter"><div class="meter-progress" data-percent="90"></div></div>
-            </div>
-            <div>
-              <div class="flex items-center justify-between text-slate-300"><span>Python</span><span>85%</span></div>
-              <div class="meter"><div class="meter-progress" data-percent="85"></div></div>
-            </div>
-            <div>
-              <div class="flex items-center justify-between text-slate-300"><span>C / C++</span><span>80%</span></div>
-              <div class="meter"><div class="meter-progress" data-percent="80"></div></div>
-            </div>
-            <div>
-              <div class="flex items-center justify-between text-slate-300"><span>JavaScript / TypeScript</span><span>86%</span></div>
-              <div class="meter"><div class="meter-progress" data-percent="86"></div></div>
-            </div>
+            <div><div class="flex justify-between text-slate-300"><span>Python</span><span>95%</span></div><div class="meter"><div class="meter-progress" data-percent="95"></div></div></div>
+            <div><div class="flex justify-between text-slate-300"><span>Java</span><span>88%</span></div><div class="meter"><div class="meter-progress" data-percent="88"></div></div></div>
+            <div><div class="flex justify-between text-slate-300"><span>TypeScript</span><span>86%</span></div><div class="meter"><div class="meter-progress" data-percent="86"></div></div></div>
+            <div><div class="flex justify-between text-slate-300"><span>SQL</span><span>90%</span></div><div class="meter"><div class="meter-progress" data-percent="90"></div></div></div>
           </div>
         </div>
-
-        <!-- Frontend -->
         <div class="reveal rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
-          <div class="flex items-center justify-between">
-            <h3 class="font-semibold text-slate-100">Frontend Development</h3>
-            <span class="text-xs text-slate-400">4+</span>
-          </div>
+          <h3 class="font-semibold text-slate-100">AI Systems</h3>
           <div class="mt-4 space-y-4 text-sm">
-            <div>
-              <div class="flex items-center justify-between text-slate-300"><span>React</span><span>88%</span></div>
-              <div class="meter"><div class="meter-progress" data-percent="88"></div></div>
-            </div>
-            <div>
-              <div class="flex items-center justify-between text-slate-300"><span>Next.js</span><span>80%</span></div>
-              <div class="meter"><div class="meter-progress" data-percent="80"></div></div>
-            </div>
-            <div>
-              <div class="flex items-center justify-between text-slate-300"><span>Tailwind CSS</span><span>90%</span></div>
-              <div class="meter"><div class="meter-progress" data-percent="90"></div></div>
-            </div>
-            <div>
-              <div class="flex items-center justify-between text-slate-300"><span>TypeScript</span><span>85%</span></div>
-              <div class="meter"><div class="meter-progress" data-percent="85"></div></div>
-            </div>
+            <div><div class="flex justify-between text-slate-300"><span>LLMs and RAG</span><span>92%</span></div><div class="meter"><div class="meter-progress" data-percent="92"></div></div></div>
+            <div><div class="flex justify-between text-slate-300"><span>LangGraph / LangChain</span><span>90%</span></div><div class="meter"><div class="meter-progress" data-percent="90"></div></div></div>
+            <div><div class="flex justify-between text-slate-300"><span>Multi-Agent Systems</span><span>90%</span></div><div class="meter"><div class="meter-progress" data-percent="90"></div></div></div>
+            <div><div class="flex justify-between text-slate-300"><span>LLM Evaluation</span><span>85%</span></div><div class="meter"><div class="meter-progress" data-percent="85"></div></div></div>
           </div>
         </div>
-
-        <!-- Backend & DB -->
         <div class="reveal rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
-          <div class="flex items-center justify-between">
-            <h3 class="font-semibold text-slate-100">Backend & Databases</h3>
-            <span class="text-xs text-slate-400">4+</span>
-          </div>
+          <h3 class="font-semibold text-slate-100">Backend, Cloud, Data</h3>
           <div class="mt-4 space-y-4 text-sm">
-            <div>
-              <div class="flex items-center justify-between text-slate-300"><span>Spring Boot</span><span>88%</span></div>
-              <div class="meter"><div class="meter-progress" data-percent="88"></div></div>
-            </div>
-            <div>
-              <div class="flex items-center justify-between text-slate-300"><span>Java Spark</span><span>80%</span></div>
-              <div class="meter"><div class="meter-progress" data-percent="80"></div></div>
-            </div>
-            <div>
-              <div class="flex items-center justify-between text-slate-300"><span>PostgreSQL</span><span>85%</span></div>
-              <div class="meter"><div class="meter-progress" data-percent="85"></div></div>
-            </div>
-            <div>
-              <div class="flex items-center justify-between text-slate-300"><span>MariaDB / MySQL</span><span>82%</span></div>
-              <div class="meter"><div class="meter-progress" data-percent="82"></div></div>
-            </div>
+            <div><div class="flex justify-between text-slate-300"><span>FastAPI / REST APIs</span><span>92%</span></div><div class="meter"><div class="meter-progress" data-percent="92"></div></div></div>
+            <div><div class="flex justify-between text-slate-300"><span>AWS / Docker / Kubernetes</span><span>86%</span></div><div class="meter"><div class="meter-progress" data-percent="86"></div></div></div>
+            <div><div class="flex justify-between text-slate-300"><span>PostgreSQL / MongoDB / Redis</span><span>88%</span></div><div class="meter"><div class="meter-progress" data-percent="88"></div></div></div>
+            <div><div class="flex justify-between text-slate-300"><span>OpenTelemetry / Prometheus</span><span>84%</span></div><div class="meter"><div class="meter-progress" data-percent="84"></div></div></div>
           </div>
         </div>
       </div>
-
-      <p class="mt-8 text-center text-slate-400">Also proficient in Git, REST APIs, Docker, CI, and Agile methodologies.</p>
-      <div class="mt-6 text-center">
-        <a href="https://github.com/x-anudeep" target="_blank" rel="noreferrer noopener"
-           class="inline-flex items-center gap-2 rounded-xl bg-slate-800 hover:bg-slate-700 px-4 py-2.5 text-slate-100 border border-slate-700">
-           View All Skills →
-        </a>
-      </div>
-
-
+      <p class="mt-8 text-center text-slate-400">Also experienced with Terraform, GitHub Actions, Kafka, Pinecone, pgvector, microservices, SDK design, distributed architecture, and event-driven systems.</p>
     </div>
   </section>
-  <!-- Achievements & Impact -->
+
   <section id="achievements" class="py-24 bg-slate-900/25">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center reveal">
-        <h2 class="text-3xl font-extrabold text-slate-100">Achievements &amp; Impact</h2>
-        <p class="mt-2 text-slate-400">Making a difference through leadership, mentorship, and technical excellence</p>
+        <h2 class="text-3xl font-extrabold text-slate-100">Highlights</h2>
+        <p class="mt-2 text-slate-400">Current resume snapshots.</p>
       </div>
-
       <div class="mt-12 grid md:grid-cols-3 gap-6">
-        <!-- Award -->
-        <div class="reveal rounded-2xl border border-slate-800 bg-slate-900/60 p-6 text-center">
-          <div class="mx-auto mb-4 h-12 w-12 grid place-items-center rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3l2.2 4.46 4.92.72-3.56 3.47.84 4.9L12 14.77 7.6 16.55l.84-4.9L4.88 8.18l4.92-.72L12 3z"/></svg>
-          </div>
-          <div class="text-2xl font-semibold text-slate-100">Dean’s List</div>
-          <div class="mt-2 font-semibold">New American University Scholarship</div>
-          <p class="mt-1 text-slate-400 text-sm">Academic distinction at Arizona State University.</p>
-        </div>
-        <!-- Instructional Aide -->
-        <div class="reveal rounded-2xl border border-slate-800 bg-slate-900/60 p-6 text-center">
-          <div class="mx-auto mb-4 h-12 w-12 grid place-items-center rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 8a4 4 0 118 0v1h1a3 3 0 013 3v4a3 3 0 01-3 3H6a3 3 0 01-3-3v-4a3 3 0 013-3h1V8z"/></svg>
-          </div>
-          <div class="text-2xl font-semibold text-slate-100">Instructional Aide — ASU</div>
-          <div class="mt-2 font-semibold">95% retention · +40% participation</div>
-          <p class="mt-1 text-slate-400 text-sm">Mentored 20+ first‑year students; improved engagement and success.</p>
-        </div>
-        <!-- Software Engineering Intern -->
-        <div class="reveal rounded-2xl border border-slate-800 bg-slate-900/60 p-6 text-center">
-          <div class="mx-auto mb-4 h-12 w-12 grid place-items-center rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6l7 4-7 4-7-4 7-4zm0 8l7 4-7 4-7-4 7-4z"/></svg>
-          </div>
-          <div class="text-2xl font-semibold text-slate-100">Summer Intern</div>
-          <div class="mt-2 font-semibold">30% faster APIs · 60% test coverage</div>
-          <p class="mt-1 text-slate-400 text-sm">Spring Boot, MySQL, JWT auth; security and performance improvements.</p>
-        </div>
+        <div class="reveal rounded-2xl border border-slate-800 bg-slate-900/60 p-6 text-center"><div class="text-2xl font-semibold text-slate-100">AI Software Intern</div><div class="mt-2 font-semibold text-emerald-300">Qbotica</div><p class="mt-2 text-slate-400 text-sm">Agentic AI logistics automation with LLMs, LangChain, LangGraph, RPA, and computer-use agents.</p></div>
+        <div class="reveal rounded-2xl border border-slate-800 bg-slate-900/60 p-6 text-center"><div class="text-2xl font-semibold text-slate-100">300K+ Daily Records</div><div class="mt-2 font-semibold text-emerald-300">Grey-Box</div><p class="mt-2 text-slate-400 text-sm">Optimized 12+ data pipelines and maintained API integrations across distributed services.</p></div>
+        <div class="reveal rounded-2xl border border-slate-800 bg-slate-900/60 p-6 text-center"><div class="text-2xl font-semibold text-slate-100">Claude Certified</div><div class="mt-2 font-semibold text-emerald-300">Architect - Foundations</div><p class="mt-2 text-slate-400 text-sm">Anthropic certification, 2026. Dean's List and New American University Scholarship recipient.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Footer (redesigned) -->
   <footer class="pt-16 pb-10 bg-slate-950 border-t border-slate-800">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid md:grid-cols-3 gap-10">
-        <div>
-          <h3 class="text-xl font-semibold text-emerald-300">Anudeep Cherukupalli</h3>
-          <p class="mt-3 text-slate-400 max-w-md">B.S. in Computer Science passionate about full‑stack development, systems, and clean UX.</p>
-        </div>
-        <div>
-          <h4 class="font-semibold text-slate-200">Quick Links</h4>
-          <ul class="mt-3 space-y-2 text-slate-400">
-            <li><a class="hover:text-emerald-300" href="#home">Home</a></li>
-            <li><a class="hover:text-emerald-300" href="about.html">About</a></li>
-            <li><a class="hover:text-emerald-300" href="experience.html">Experience</a></li>
-            <li><a class="hover:text-emerald-300" href="projects.html">Projects</a></li>
-            <li><a class="hover:text-emerald-300" href="mailto:c.anudeep06@gmail.com">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold text-slate-200">Connect</h4>
-          <ul class="mt-3 space-y-2 text-slate-400">
-            <li><a class="hover:text-emerald-300" href="mailto:c.anudeep06@gmail.com">Email</a></li>
-            <li><a class="hover:text-emerald-300" href="https://www.linkedin.com/in/anudeep-cherukupalli/" target="_blank" rel="noreferrer noopener">LinkedIn</a></li>
-          </ul>
-        </div>
+        <div><h3 class="text-xl font-semibold text-emerald-300">Anudeep Cherukupalli</h3><p class="mt-3 text-slate-400 max-w-md">AI backend engineer focused on agentic systems, RAG, scalable APIs, cloud infrastructure, and production observability.</p></div>
+        <div><h4 class="font-semibold text-slate-200">Quick Links</h4><ul class="mt-3 space-y-2 text-slate-400"><li><a class="hover:text-emerald-300" href="#home">Home</a></li><li><a class="hover:text-emerald-300" href="about.html">About</a></li><li><a class="hover:text-emerald-300" href="experience.html">Experience</a></li><li><a class="hover:text-emerald-300" href="projects.html">Projects</a></li><li><a class="hover:text-emerald-300" href="contact.html">Contact</a></li></ul></div>
+        <div><h4 class="font-semibold text-slate-200">Connect</h4><ul class="mt-3 space-y-2 text-slate-400"><li><a class="hover:text-emerald-300" href="mailto:c.anudeep06@gmail.com">Email</a></li><li><a class="hover:text-emerald-300" href="https://www.linkedin.com/in/anudeep-cherukupalli/" target="_blank" rel="noreferrer noopener">LinkedIn</a></li><li><a class="hover:text-emerald-300" href="https://github.com/x-anudeep" target="_blank" rel="noreferrer noopener">GitHub</a></li></ul></div>
       </div>
-
-      <div class="mt-10 border-t border-slate-800 pt-6 text-sm text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <p>© <span id="year"></span> Anudeep Cherukupalli. All rights reserved.</p>
-        <p>Built with HTML, Tailwind CSS, and ❤️</p>
-      </div>
+      <div class="mt-10 border-t border-slate-800 pt-6 text-sm text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-3"><p>&copy; <span id="year"></span> Anudeep Cherukupalli. All rights reserved.</p><p>Built with HTML and Tailwind CSS.</p></div>
     </div>
   </footer>
 
   <script>
-    // Force dark theme
     document.documentElement.classList.add('dark');
-
-    // Mobile menu toggle
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     if (menuBtn && mobileMenu) {
       menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
       mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
     }
-
-    // IntersectionObserver to reveal elements
     const revealEls = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in-view'); });
-    }, { threshold: 0.15 });
+    const io = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in-view'); }); }, { threshold: 0.15 });
     revealEls.forEach(el => io.observe(el));
-
-    // Keep Home active at all times (no scroll-based switching)
-    const navLinks = document.querySelectorAll('header nav a.nav-link');
-    navLinks.forEach(a => a.classList.remove('active'));
-    const homeLink = document.querySelector('header nav a[href="#home"]') || document.querySelector('header nav a[href="index.html"]');
-    if (homeLink) homeLink.classList.add('active');
-
-    // Hide header on scroll down; show on scroll up
     (function(){
       const header = document.querySelector('header');
-      if(!header) return;
       let lastY = window.pageYOffset || document.documentElement.scrollTop;
-      const THRESH = 8; // ignore tiny jitter
+      const THRESH = 8;
       window.addEventListener('scroll', () => {
         const y = window.pageYOffset || document.documentElement.scrollTop;
         const delta = y - lastY;
         if (Math.abs(delta) <= THRESH) return;
-        if (delta > 0 && y > 120) { // scrolling down
-          header.classList.add('header-hidden');
-        } else { // scrolling up
-          header.classList.remove('header-hidden');
-        }
+        if (delta > 0 && y > 120) header.classList.add('header-hidden');
+        else header.classList.remove('header-hidden');
         lastY = y;
       }, { passive: true });
     })();
-
-    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // === Starfield background ===
     (function(){
       const canvas = document.getElementById('starfield');
       if(!canvas) return;
       const ctx = canvas.getContext('2d');
-      let DPR = 1, W = 0, H = 0, stars = [], COUNT = 200, anim;
+      let DPR = 1, W = 0, H = 0, stars = [], COUNT = 200;
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
       function rand(n){return Math.random()*n}
       function clamp(v,min,max){return v<min?min:v>max?max:v}
-
       function resize(){
-        DPR = Math.min(window.devicePixelRatio||1, 2);
-        const vw = window.innerWidth, vh = window.innerHeight;
-        canvas.style.width = vw+'px';
-        canvas.style.height = vh+'px';
-        canvas.width = Math.floor(vw*DPR);
-        canvas.height = Math.floor(vh*DPR);
-        W = vw; H = vh;
-        COUNT = Math.max(120, Math.floor((vw*vh)/1800));
-        init();
-      }
-
-      function init(){
-        stars = Array.from({length: COUNT}, () => {
-          const speed = 0.05 + Math.random()*0.35; // subtle drift
-          return {
-            x: rand(W), y: rand(H), r: 0.2 + Math.random()*1.6,
-            a: 0.2 + Math.random()*0.8, va: 0.002 + Math.random()*0.006,
-            vx: -speed, vy: (Math.random()-0.5)*0.10
-          };
-        });
+        DPR = Math.min(window.devicePixelRatio||1, 2); W = window.innerWidth; H = window.innerHeight;
+        canvas.style.width = W+'px'; canvas.style.height = H+'px'; canvas.width = Math.floor(W*DPR); canvas.height = Math.floor(H*DPR);
+        COUNT = Math.max(120, Math.floor((W*H)/1800));
+        stars = Array.from({length: COUNT}, () => ({x:rand(W),y:rand(H),r:0.2+Math.random()*1.6,a:0.2+Math.random()*0.8,va:0.002+Math.random()*0.006,vx:-(0.05+Math.random()*0.35),vy:(Math.random()-0.5)*0.10}));
         draw(true);
       }
-
       function draw(staticOnce){
-        ctx.setTransform(DPR,0,0,DPR,0,0);
-        ctx.clearRect(0,0,W,H);
+        ctx.setTransform(DPR,0,0,DPR,0,0); ctx.clearRect(0,0,W,H);
         for(const s of stars){
-          if(!staticOnce){
-            s.x += s.vx; s.y += s.vy; s.a += (Math.random()-0.5)*s.va; s.a = clamp(s.a, 0.15, 1);
-            if(s.x < -2) s.x = W + 2;
-            if(s.y < -2) s.y = H + 2;
-            if(s.y > H + 2) s.y = -2;
-          }
-          ctx.globalAlpha = s.a;
-          ctx.beginPath();
-          ctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
-          ctx.fillStyle = '#ffffff';
-          ctx.fill();
+          if(!staticOnce){s.x+=s.vx;s.y+=s.vy;s.a+=(Math.random()-0.5)*s.va;s.a=clamp(s.a,0.15,1);if(s.x<-2)s.x=W+2;if(s.y<-2)s.y=H+2;if(s.y>H+2)s.y=-2}
+          ctx.globalAlpha=s.a;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle='#ffffff';ctx.fill();
         }
-        ctx.globalAlpha = 1;
-        if(!staticOnce) anim = requestAnimationFrame(draw);
+        ctx.globalAlpha=1; if(!staticOnce) requestAnimationFrame(draw);
       }
-
-      window.addEventListener('resize', resize);
-      resize();
-      if(!reduce){ draw(); } // animate
+      window.addEventListener('resize', resize); resize(); if(!reduce) draw();
     })();
-
-    // === Skill meter animation ===
     (function(){
       const bars = document.querySelectorAll('.meter-progress');
-      const obs = new IntersectionObserver((entries)=>{
-        entries.forEach(e=>{ if(e.isIntersecting){ const el=e.target; const p=el.getAttribute('data-percent')||'0'; el.style.width=p+'%'; obs.unobserve(el);} });
-      },{threshold:0.4});
+      const obs = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ const el=e.target; el.style.width=(el.getAttribute('data-percent')||'0')+'%'; obs.unobserve(el);} }); },{threshold:0.4});
       bars.forEach(b=>obs.observe(b));
     })();
-
-    // === Typewriter effect ===
     (function(){
-      const el = document.getElementById('typewrite');
-      const caret = document.getElementById('caret');
-      if(!el) return;
-      const phrases = [
-        'Full-Stack Developer',
-        'Test-Driven Engineer',
-        'Innovator'
-      ];
-      let i = 0, j = 0, deleting = true;
-      const typeSpeed = 70;      // ms per char when typing
-      const delSpeed  = 35;      // ms per char when deleting
-      const holdFull  = 900;     // pause when a word is fully typed
-      const holdEmpty = 400;     // pause when cleared before next
-
+      const el = document.getElementById('typewrite'); if(!el) return;
+      const phrases = ['AI Software Engineer', 'Backend Engineer', 'Agentic AI Builder', 'RAG Systems Developer'];
+      let i = 0, j = 0, deleting = false;
       function tick(){
-        const word = phrases[i];
-        if(!deleting){
-          el.textContent = word.slice(0, j++);
-          if(j > word.length){ deleting = true; setTimeout(tick, holdFull); return; }
-          setTimeout(tick, typeSpeed);
-        } else {
-          el.textContent = word.slice(0, j--);
-          if(j < 0){ deleting = false; i = (i + 1) % phrases.length; setTimeout(tick, holdEmpty); return; }
-          setTimeout(tick, delSpeed);
-        }
+        const word = phrases[i]; el.textContent = word.slice(0,j);
+        if(!deleting && j < word.length){ j++; setTimeout(tick,70); return; }
+        if(!deleting){ deleting = true; setTimeout(tick,900); return; }
+        if(j > 0){ j--; setTimeout(tick,35); return; }
+        deleting = false; i = (i + 1) % phrases.length; setTimeout(tick,350);
       }
-
-      // caret blink
-      setInterval(()=>{ if(caret) caret.style.opacity = caret.style.opacity === '0' ? '1' : '0'; }, 500);
-      // preload first phrase fully, then start by deleting it
-      j = phrases[0].length;
-      el.textContent = phrases[0];
       tick();
     })();
-
-    // === Tilt interactions for cards ===
-    (function(){
-      const cards = document.querySelectorAll('[data-tilt]');
-      cards.forEach(card => {
-        const inner = card.querySelector('.tilt') || card;
-        const shine = card.querySelector('.shine');
-        card.addEventListener('mousemove', (e) => {
-          const r = card.getBoundingClientRect();
-          const x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
-          const rx = (0.5 - y) * 10; // rotateX
-          const ry = (x - 0.5) * 12; // rotateY
-          inner.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg)`;
-          if (shine){
-            shine.style.setProperty('--mx', `${x*100}%`);
-            shine.style.setProperty('--my', `${y*100}%`);
-          }
-        });
-        card.addEventListener('mouseleave', () => {
-          inner.style.transform = 'rotateX(0) rotateY(0)';
-        });
-      });
-    })();
-
-    // === Count-up for achievements (if any .count present) ===
-    (function(){
-      const nums = document.querySelectorAll('#achievements .count');
-      if (nums.length === 0) return; // no counters currently
-      const obs = new IntersectionObserver((entries)=>{
-        entries.forEach(e=>{
-          if(e.isIntersecting){
-            const el = e.target; const target = parseInt(el.getAttribute('data-count')||'0',10);
-            let cur = 0; const step = Math.max(1, Math.ceil(target/60));
-            const id = setInterval(()=>{ cur += step; if(cur >= target){ cur = target; clearInterval(id);} el.textContent = cur; }, 20);
-            obs.unobserve(el);
-          }
-        })
-      },{threshold:0.5});
-      nums.forEach(n=>obs.observe(n));
-    })();
-
-    // --- Smoke tests (basic runtime checks) ---
-    (function(){
-      try {
-        console.assert(document.querySelector('header nav a[href="#home"]') || document.querySelector('header nav a[href="index.html"]'), 'Home link missing');
-        console.assert(document.getElementById('all-projects'), 'Projects section missing');
-        console.assert(document.getElementById('achievements'), 'Achievements section missing');
-        console.assert(document.body, 'Body element missing');
-        console.log('Smoke tests passed');
-      } catch (err) {
-        console.error('Smoke tests failed', err);
-      }
-    })();
+    document.querySelectorAll('.card').forEach(card=>{ card.addEventListener('mousemove', ev=>{ const s = card.querySelector('.shine'); if(!s) return; const r = card.getBoundingClientRect(); s.style.setProperty('--mx', `${((ev.clientX-r.left)/r.width)*100}%`); s.style.setProperty('--my', `${((ev.clientY-r.top)/r.height)*100}%`); }); });
   </script>
 </body>
 </html>
