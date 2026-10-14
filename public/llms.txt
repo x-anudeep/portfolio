@@ -1,0 +1,24 @@
+# Anudeep Cherukupalli
+
+AI and backend software engineer. Builds agentic workflows, APIs, and distributed cloud services.
+
+Experience: Qbotica, Grey-Box (Project CyberCafe), SVSRco, Arizona State University.
+Education: BS Computer Science, Arizona State University, May 2026; GPA 3.6/4.00.
+Projects: Multi-Agent Intelligence Engine; Enterprise RAG + Evaluation Harness; WorkflowGuard.
+Email: chanudeep.work@gmail.com
+GitHub: https://github.com/x-anudeep
+LinkedIn: https://www.linkedin.com/in/anudeep-cherukupalli/
+
+Featured GitHub projects:
+- Multi-Agent Intelligence Engine: https://github.com/x-anudeep/Multi-Agent-Intelligence-Engine
+- Bionic Agents Control Center: https://github.com/x-anudeep/Bionic-Agents
+- Universal TMS Data Extractor & Automation Copilot: https://github.com/x-anudeep/Automation_project
+- Multi-Agent Logistics Quotation System: https://github.com/x-anudeep/Multi-Agent-Project
+- WorkflowGuard – AI Workflow Evaluation Platform: https://github.com/x-anudeep/WorkflowGuard
+- Financial Statement Intelligence Platform: https://github.com/x-anudeep/Financial-Intelligence-Manager
+- The Place on Jentilly – Property Management: https://github.com/x-anudeep/Property-Management-Voice-Agent
+- AdminGate – Role-Based Help & Knowledge System: https://github.com/x-anudeep/AdminGate
+- Enterprise RAG + Evaluation Harness: https://github.com/x-anudeep/enterprise-rag-eval-harness
+- Enterprise LLM Gateway: https://github.com/x-anudeep/Multi-Model-Router
+- AI-Native Microservice Platform: https://github.com/x-anudeep/AI-Native-Microservice
+- Student Management System: https://github.com/x-anudeep/student-management-system

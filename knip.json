@@ -1,0 +1,3 @@
+{
+    "entry": ["src/world/workers/sceneGeometry.worker.ts", "index.html", "privacy.html"]
+}

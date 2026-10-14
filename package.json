@@ -1,0 +1,35 @@
+{
+    "name": "anudeep-portfolio",
+    "version": "2.0.0",
+    "private": true,
+    "description": "Anudeep Cherukupalli’s interactive AI and backend engineering portfolio.",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "npm run typecheck && vite build && npm run seo:check",
+        "preview": "vite preview",
+        "seo:check": "node scripts/check-seo-build.mjs",
+        "typecheck": "tsc --noEmit",
+        "lint": "oxlint",
+        "lint:fix": "oxlint --fix",
+        "format": "oxfmt",
+        "format:check": "oxfmt --check",
+        "check": "npm run typecheck && npm run lint && npm run format:check && npm run deadcode",
+        "deadcode": "knip"
+    },
+    "dependencies": {
+        "gsap": "3.15.0",
+        "three": "0.184.0"
+    },
+    "devDependencies": {
+        "@types/three": "0.184.1",
+        "knip": "6.29.0",
+        "lil-gui": "0.21.0",
+        "oxfmt": "0.73.0",
+        "oxlint": "1.75.0",
+        "sass": "1.100.0",
+        "typescript": "7.0.2",
+        "vite": "8.2.1",
+        "vite-plugin-glsl": "1.6.0"
+    }
+}

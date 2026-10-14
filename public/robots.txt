@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://x-anudeep.github.io/portfolio/sitemap.xml
