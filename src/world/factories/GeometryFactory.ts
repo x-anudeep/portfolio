@@ -206,12 +206,28 @@ export function createTextMorphPositions(
 ): Float32Array {
     const count = cloudPositions.length / 3;
     const PERFOMANCE_EFFICIENT_SEGMENTS_COUNT = 8;
-    const textGeometry = new TextGeometry(text, {
+    const textOptions = {
         font,
         size: 2,
         depth: 0.4,
         curveSegments: PERFOMANCE_EFFICIENT_SEGMENTS_COUNT,
-    });
+    };
+    const textGeometry = text.includes('\n')
+        ? (() => {
+              const lines = text.split('\n').map((line, index) => {
+                  const geometry = new TextGeometry(line, textOptions);
+                  geometry.center();
+                  geometry.translate(0, -index * 2.8, 0);
+                  return geometry;
+              });
+              const merged = mergeGeometries(lines);
+              lines.forEach((line) => line.dispose());
+              if (!merged) {
+                  throw new Error('Could not merge multiline text geometry');
+              }
+              return merged;
+          })()
+        : new TextGeometry(text, textOptions);
     const samplerMaterial = new THREE.MeshBasicMaterial();
     const sampler = new MeshSurfaceSampler(new THREE.Mesh(textGeometry, samplerMaterial)).build();
     const positions = new Float32Array(cloudPositions.length);

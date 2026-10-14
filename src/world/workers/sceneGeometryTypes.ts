@@ -1,6 +1,7 @@
 export type SceneMorphTargetKey = 'name' | 'experience' | 'education' | 'projects' | 'tunnel';
 
 export interface SceneGeometryRequest {
+    isMobile: boolean;
     cloudPositions: Float32Array;
     floatingTextCount: number;
     ellipsisCount: number;

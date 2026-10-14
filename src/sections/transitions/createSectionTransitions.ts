@@ -747,7 +747,7 @@ export const createSectionTransitions = ({
             sectionSnapSettlingCheck?.kill();
             sectionSnapSettlingCheck = undefined;
 
-            if (reduceMotion) {
+            if (reduceMotion || config.isMobile) {
                 return;
             }
 

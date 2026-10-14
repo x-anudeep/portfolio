@@ -47,7 +47,7 @@ const collectTransferables = (data: SceneGeometryData): Transferable[] => {
 workerScope.onmessage = (event) => {
     (async () => {
         try {
-            const { cloudPositions, floatingTextCount, ellipsisCount } = event.data;
+            const { cloudPositions, floatingTextCount, ellipsisCount, isMobile } = event.data;
             const [regularFont, italicFont] = await Promise.all([
                 loadFontAsset(regularFontUrl, 'regular Urbanist'),
                 loadFontAsset(italicFontUrl, 'italic Urbanist'),
@@ -65,7 +65,11 @@ workerScope.onmessage = (event) => {
                 start: getFloatAttribute(floatingGeometry, 'aStart'),
             };
             const shapeTargets: Record<SceneMorphTargetKey, Float32Array> = {
-                name: createTextMorphPositions(regularFont, 'ANUDEEP CHERUKUPALLI', cloudPositions),
+                name: createTextMorphPositions(
+                    regularFont,
+                    isMobile ? 'ANUDEEP\nCHERUKUPALLI' : 'ANUDEEP CHERUKUPALLI',
+                    cloudPositions,
+                ),
                 experience: createTextMorphPositions(regularFont, 'EXPERIENCE', cloudPositions),
                 education: createTextMorphPositions(regularFont, 'EDUCATION', cloudPositions),
                 projects: createTextMorphPositions(regularFont, 'PROJECTS', cloudPositions),

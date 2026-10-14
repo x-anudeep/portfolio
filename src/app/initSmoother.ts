@@ -6,12 +6,12 @@ import type { ResponsiveConfig } from './responsiveConfig';
 gsap.registerPlugin(ScrollSmoother);
 
 export function initSmoother(config: ResponsiveConfig) {
-    const smoothScrollingEnabled = !config.reducedMotion;
+    const smoothScrollingEnabled = !config.reducedMotion && !config.isMobile;
 
     return ScrollSmoother.create({
         wrapper: '#smooth-wrapper',
         content: '#smooth-content',
-        smooth: config.reducedMotion ? 0 : 3,
+        smooth: smoothScrollingEnabled ? 3 : 0,
         effects: smoothScrollingEnabled,
         normalizeScroll: smoothScrollingEnabled
             ? config.isCompact

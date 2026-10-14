@@ -15,6 +15,7 @@ export const generateSceneGeometry = (
         const worker = new SceneGeometryWorker();
         const workerCloudPositions = cloudPositions.slice();
         const request: SceneGeometryRequest = {
+            isMobile: window.innerWidth <= 767,
             cloudPositions: workerCloudPositions,
             floatingTextCount: particleCounts.floatingText,
             ellipsisCount: particleCounts.ellipsis,
