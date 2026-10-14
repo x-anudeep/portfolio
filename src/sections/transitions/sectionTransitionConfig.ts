@@ -24,8 +24,8 @@ export const MOBILE_EXPERIENCE_TRANSITION = {
 } as const;
 
 export const MOBILE_PROJECTS_MORPH = {
-    start: 0.1,
-    end: 0.3,
+    start: 0,
+    end: 0.16,
 } as const;
 
 export const MOBILE_PROJECTS_TEXT_LOWER = {

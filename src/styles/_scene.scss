@@ -50,7 +50,7 @@ section {
 }
 
 #experience {
-    min-height: 380vh;
+    min-height: 0;
     padding-top: 110vh;
 }
 
@@ -83,6 +83,6 @@ section {
 
     #experience {
         padding-top: 150vh;
-        padding-bottom: 400vh;
+        padding-bottom: clamp(4rem, 18svh, 10rem);
     }
 }

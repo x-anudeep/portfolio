@@ -47,8 +47,8 @@ export const initExperienceAnimations = (config: ResponsiveConfig): void => {
                             trigger: row,
                             start: useCompactMotion ? 'top bottom-=32' : 'top bottom-=75',
                             end: useCompactMotion ? 'bottom center-=260' : 'bottom center-=175',
-                            scrub: true,
-                            fastScrollEnd: true,
+                            scrub: row.closest('#education') ? 0.6 : true,
+                            fastScrollEnd: !row.closest('#education'),
                         },
                     });
 

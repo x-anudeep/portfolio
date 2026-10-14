@@ -400,11 +400,11 @@ export const createSectionTransitions = ({
         // Match the heading to the content instead of the template's fixed timing.
         const educationStart =
             sectionHeight > 0 && educationElement
-                ? (educationOffset + window.innerHeight * 0.1) / sectionHeight
+                ? (educationOffset - window.innerHeight * 0.15) / sectionHeight
                 : experienceTransition.educationStart;
         const educationEnd =
             sectionHeight > 0 && educationElement
-                ? (educationOffset + window.innerHeight * 0.5) / sectionHeight
+                ? Math.min(0.96, (educationOffset + window.innerHeight * 0.7) / sectionHeight)
                 : experienceTransition.educationEnd;
         const shootingStarsVisibility =
             smoothstep(rangeProgress(progress, 0.14, 0.26)) *
